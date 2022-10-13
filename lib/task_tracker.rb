@@ -19,8 +19,10 @@ class TaskTracker
   end
 
   def list
-    return @tasks.join(", ")
+    if @tasks == []
+      return "You have no tasks."
+    else
+      return @tasks.join(", ")
+    end
   end
-
-
 end

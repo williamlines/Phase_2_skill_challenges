@@ -17,5 +17,7 @@ RSpec.describe TaskTracker do
     expect(task_tracker.list).to eq "TODO laundry, TODO walk the dog"
     expect(task_tracker.complete("TODO laundry")).to eq "TODO laundry completed!"
     expect(task_tracker.list).to eq "TODO walk the dog"
+    task_tracker.complete("TODO walk the dog")
+    expect(task_tracker.list).to eq "You have no tasks."
   end
 end
