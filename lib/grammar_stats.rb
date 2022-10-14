@@ -9,8 +9,8 @@ class GrammarStats
   # letter and ends with a sentence-ending punctuation mark.
   def check(text) # text is a string
     if text == ""
-      return false
       @total += 1
+      return false
     end
     if text[0] == text[0].upcase
       if [".","!","?"].include?(text[-1])
