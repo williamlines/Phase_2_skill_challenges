@@ -29,9 +29,9 @@ class Diary
 
   def reading_time(wpm)
     time = 0
-    @entries.each { |entry|
+    @entries.each do |entry|
       time += entry.reading_time(wpm)
-    }
+    end
     return time
   end
 
